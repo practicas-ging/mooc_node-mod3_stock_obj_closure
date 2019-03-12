@@ -96,7 +96,7 @@ describe("mooc_node-mod3_stock_obj_closure", function () {
             shop.addJSON('{ "spoon":{"n":2, "code":5}, "knife":{"n": 3, "code":9} }');
             const input = `shop.addJSON('{ "spoon":{"n":2, "code":5}, "knife":{"n": 3, "code":9} }');`;
             console.log(shop.getJSON());
-            const expected = '{"spoon":{"n":2,"code":5},"knife":{"n":3,"code":9}}';
+            const expected = '{"spoon":{"code":5,"n":2},"knife":{"code":9,"n":3}}';
             const output = shop.getJSON();
             this.msg_ok = `The 'AddJSON' method has been correctly implemented`;
             this.msg_err = `'${expected}' has not been found when executing '${input}'\n\t\t\tReceived: ${output}`;
